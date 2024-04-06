@@ -4,10 +4,10 @@
     <app-cart (closeEvent)="sidenav.close()"></app-cart>
   </mat-drawer>
   <mat-drawer-content>
-    <button mat-raised-button [matBadge]="(numberOfCartItems$ | async)" (click)="sidenav.opened ? sidenav.close() : sidenav.open()">
+    <button mat-raised-button [matBadge]="ngstore.appState.cart.numberOfCartItems" (click)="sidenav.opened ? sidenav.close() : sidenav.open()">
       {{sidenav.opened ? 'Close' : 'Open'}} Cart
       <mat-icon>shopping_cart</mat-icon>
-    </button> 
+    </button>
     <app-item-list></app-item-list>
   </mat-drawer-content>
 </mat-drawer-container>

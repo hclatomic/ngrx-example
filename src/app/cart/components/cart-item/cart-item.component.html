@@ -1,19 +1,19 @@
 <mat-card class="item" appearance="outlined">
   <div class="item-description">
-    <span class="number-of-items">{{cartItem?.numberOfItems}} x</span>
-    <span class="name">{{cartItem?.item?.name}}</span>
-    <span class="price">à {{cartItem?.item?.price | currency}}</span>
+    <span class="number-of-items">{{cartItem.numberOfItems}} x</span>
+    <span class="name">{{cartItem.item.name}}</span>
+    <span class="price">à {{cartItem.item.price | currency}}</span>
     <div class="actions">
-      <button mat-icon-button (click)="increaseItemInCart()">
+      <button mat-icon-button (click)="catService.updateCart('increase',cartItem )">
         <mat-icon>add</mat-icon>
       </button>
-      <button mat-icon-button (click)="reduceItemInCart()">
+      <button mat-icon-button (click)="catService.updateCart('decrease',cartItem )">
         <mat-icon>remove</mat-icon>
       </button>
-      <button mat-icon-button (click)="removeItemFromCart()">
+      <button mat-icon-button (click)="catService.updateCart('delete',cartItem )">
         <mat-icon>delete</mat-icon>
       </button>
     </div>
   </div>
-  <span class="total-price">{{cartItem?.totalPrice | currency}}</span>
+  <span class="total-price">{{cartItem.totalPrice | currency}}</span>
 </mat-card>

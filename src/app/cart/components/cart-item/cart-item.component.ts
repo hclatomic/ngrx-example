@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {CartItem} from "../../model/cart-item.model";
+import { Component, Input } from '@angular/core';
+import { CatalogService } from 'src/app/catalog/services/catalog.service';
 
 @Component({
   selector: 'app-cart-item',
@@ -9,19 +9,10 @@ import {CartItem} from "../../model/cart-item.model";
 export class CartItemComponent {
 
   @Input() cartItem: any | undefined;
-  @Output() increaseItemInCartEvent = new EventEmitter<CartItem>();
-  @Output() reduceItemInCartEvent = new EventEmitter<CartItem>();
-  @Output() removeItemInCartEvent = new EventEmitter<CartItem>();
 
-  reduceItemInCart() {
-    this.reduceItemInCartEvent.emit(this.cartItem);
-  }
+  constructor(
+    public catService: CatalogService
+  ) { }
 
-  removeItemFromCart() {
-    this.removeItemInCartEvent.emit(this.cartItem);
-  }
 
-  increaseItemInCart() {
-    this.increaseItemInCartEvent.emit(this.cartItem);
-  }
 }

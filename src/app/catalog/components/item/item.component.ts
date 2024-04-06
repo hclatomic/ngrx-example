@@ -1,5 +1,6 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Item} from "../../model/catalog.model";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Item } from "../../model/catalog.model";
+import { CatalogService } from '../../services/catalog.service';
 
 @Component({
   selector: 'app-item',
@@ -8,10 +9,10 @@ import {Item} from "../../model/catalog.model";
 })
 export class ItemComponent {
 
-  @Input() item: Item | undefined;
-  @Output() addToCartEventEmitter = new EventEmitter<Item>();
+  @Input() item!: Item;
 
-  addToCart(item: Item | undefined): void {
-    this.addToCartEventEmitter.emit(item);
-  }
+  constructor(
+    public catService: CatalogService
+  ) { }
+
 }

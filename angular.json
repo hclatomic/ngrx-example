@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngrx-example": {
+    "ngrx-example-transformed": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngrx-example",
+            "outputPath": "dist/ngrx-example-transformed",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ngrx-example:build:production"
+              "browserTarget": "ngrx-example-transformed:build:production"
             },
             "development": {
-              "browserTarget": "ngrx-example:build:development"
+              "browserTarget": "ngrx-example-transformed:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngrx-example:build"
+            "browserTarget": "ngrx-example-transformed:build"
           }
         },
         "test": {

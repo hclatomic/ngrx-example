@@ -1,8 +1,6 @@
-import {Component, EventEmitter, Output} from '@angular/core';
-import {Store} from "@ngrx/store";
-import {ItemsFeatureState, selectItems} from "../../reducers/catalog.selector";
-import {Item} from "../../model/catalog.model";
-import {CatalogPageActions} from "../../actions/catalog-page.actions";
+import { Component } from '@angular/core';
+import { StoreService } from 'src/app/services/store.service';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-item-list',
@@ -11,17 +9,10 @@ import {CatalogPageActions} from "../../actions/catalog-page.actions";
 })
 export class CatalogPageComponent {
 
-  @Output()
-  itemAddedEvent = new EventEmitter<Item>();
-
-  items$ = this.store.select(selectItems);
-
-  constructor(private readonly store: Store<ItemsFeatureState>) {
-    this.store.dispatch(CatalogPageActions.getItems());
-  }
-
-  addItemToCart(item: Item) {
-    this.store.dispatch(CatalogPageActions.addItemToCart({item}));
-    this.itemAddedEvent.emit(item);
+  constructor(
+    public ngstore: StoreService,
+    private api: ApiService
+  ) {
+    this.api.getCatalog();
   }
 }

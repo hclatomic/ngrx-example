@@ -1,4 +1,4 @@
-name: ngrx-example
+name: ngrx-example-transformed
 on:
   push:
     branches:

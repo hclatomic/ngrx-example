@@ -1,0 +1,6 @@
+"filename", "language", "TypeScript", "comment", "blank", "total"
+"/var/www/html/dev/trash/ngrx-example-transformed.transformed/src/app/catalog/components/item/item.component.ts", "TypeScript", -2, 0, 0, -2
+"/var/www/html/dev/trash/ngrx-example-transformed.transformed/src/app/services/api.service.spec.ts", "TypeScript", -12, 0, -5, -17
+"/var/www/html/dev/trash/ngrx-example-transformed.transformed/src/app/services/store.service.spec.ts", "TypeScript", -12, 0, -5, -17
+"/var/www/html/dev/trash/ngrx-example-transformed.transformed/src/app/services/store.service.ts", "TypeScript", 12, 0, -2, 10
+"Total", "-", -14, 0, -12, -26
