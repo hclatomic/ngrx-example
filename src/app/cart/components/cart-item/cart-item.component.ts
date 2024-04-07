@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CatalogService } from 'src/app/catalog/services/catalog.service';
+import { CatalogService } from '../../../catalog/services/catalog.service';
 
 @Component({
   selector: 'app-cart-item',

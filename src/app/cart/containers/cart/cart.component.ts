@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { StoreService } from 'src/app/services/store.service';
+import { StoreService } from '../../../services/store.service';
 
 @Component({
   selector: 'app-cart',

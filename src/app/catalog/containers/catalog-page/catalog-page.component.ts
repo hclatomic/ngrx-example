@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { StoreService } from 'src/app/services/store.service';
-import { ApiService } from 'src/app/services/api.service';
+import { StoreService } from '../../..//services/store.service';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   selector: 'app-item-list',
